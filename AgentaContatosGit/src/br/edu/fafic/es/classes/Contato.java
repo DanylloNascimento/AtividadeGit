@@ -9,6 +9,48 @@ package br.edu.fafic.es.classes;
  *
  * @author laelk
  */
-public class Contato {
+public  class Contato {
     
+    private  String nome, telefone; 
+    private  Endereco endereco;
+    
+    
+    public Contato (){
+        
+    }
+
+    public Contato(String nome, String telefone, Endereco endereco) {
+        
+        this.nome = nome;
+        this.telefone = telefone;
+        this.endereco = endereco;
+       
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    
+    @Override
+    public String toString (){
+        
+       return String.format("===== CLIENTE ======%n"
+        + "Nome: %s%n"
+        + "Telefone: %s%n%n"
+        + " ========= ENDEREÇO ===== %n"
+               + "%s%n", getNome (), getTelefone(), getEndereco ());
+    }  
 }
